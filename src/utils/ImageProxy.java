@@ -37,7 +37,7 @@ public class ImageProxy extends BufferedImage
 		} catch (Exception ex)
 		{
 			img = new BufferedImage(215, 30, TYPE_4BYTE_ABGR);
-			try(AutoCloseableGraphics g = new AutoCloseableGraphics(img.createGraphics()))
+			try(ACGraphics g = new ACGraphics(img.createGraphics()))
 			{
 				g.setColor(Color.PINK);
 				g.drawString("Echec du chargement de l'image", 2, 20);

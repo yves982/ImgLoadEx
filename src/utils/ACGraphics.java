@@ -25,7 +25,7 @@ import java.awt.image.renderable.RenderableImage;
 import java.text.AttributedCharacterIterator;
 import java.util.Map;
 
-public class AutoCloseableGraphics extends Graphics2D implements AutoCloseable
+public class ACGraphics extends Graphics2D implements AutoCloseable
 {
 	@Override
 	public void close()
@@ -468,7 +468,7 @@ public class AutoCloseableGraphics extends Graphics2D implements AutoCloseable
 
 	Graphics2D g;
 
-	public AutoCloseableGraphics(Graphics2D g)
+	public ACGraphics(Graphics2D g)
 	{
 		this.g = g;
 	}
